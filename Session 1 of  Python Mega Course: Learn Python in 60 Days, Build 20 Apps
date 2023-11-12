@@ -1,0 +1,73 @@
+To test whether PyCharm is working on Windows (go to Search -> Command Prompt -> enter py -3.11 -> See sample below)
+C:\Users\Windows>py -3.11
+Python 3.11.2 (tags/v3.11.2:878ead1, Feb  7 2023, 16:38:35) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 2+2
+4
+>>> 
+------------------------------------------------------------------------------------------------------------------------------
+# user_text = input("Enter a todo:")
+# print(user_text)
+
+# print and input are syntaxes.
+# ("Enter a todo:") pertains to the argument of print
+# input function can also have an argument
+# can also just remove the print function and just add the argument to input function
+# Enter a to do -> is called the string. Text in Python is known as String
+# print -> is a keyword
+# user_text -> variable. Cannot have a number at the beginning of variable
+# string can be stored in a variable
+
+user_prompt = "Enter a todo:"
+text = input(user_prompt)
+print(text)
+
+# the code above have become 3 lines instead of two because of prompt variable. But having variable improves the structure of the program
+------------------------------------------------------------------------------------------------------------------------------
+user_prompt = "Enter a todo:"
+todo1 = input(user_prompt)
+todo2 = input(user_prompt)
+todo3 = input(user_prompt)
+
+# todo1 = input(user_prompt) -> this variable is associated with the outputs of the input function which is a string.
+# todo2 = input(user_prompt)
+# todo3 = input(user_prompt)
+# String is ()
+# List is []
+# todos is a 5th variable
+# the variable below is associated with a list []
+# this function will print out a list -> print(todos)
+
+todos = [todo1,todo2,todo3]
+print(todos)
+
+print(type(user_prompt))
+
+RESULT:
+C:\Users\Windows\PycharmProjects\pythonProject\pythonProject1\env\Scripts\python.exe C:\Users\Windows\PycharmProjects\pythonProject\pythonProject1\main.py 
+Enter a todo:Clean
+Enter a todo:Meet
+Enter a todo:Throw
+['Clean', 'Meet', 'Throw'] -> this list was printed out by this function: print(todos)
+<class 'str'>               -> this output was the result of this line: print(type(user_prompt)). this means that the value of user_prompt is a string
+
+Process finished with exit code 0
+----------------------------------------------------------------------------------------------------------------------------
+Now, of course, the question is, is this sustainable?
+todo1 = input(user_prompt)
+todo2 = input(user_prompt)
+todo3 = input(user_prompt)
+
+So having to write multiple functions.
+For every to do.
+Well, the answer is, of course not.
+This is not sustainable.
+We don't know how many to do.
+The user wants to enter, so we need to automate this process.
+We need to let the user decides how many dos they want to enter.
+And we don't want to write here 200 input functions.
+So of course there is a way to avoid that.
+--------------------------------------------------------------------------------------------------------------------------
+In string, single quotes ('') works the same as (""). But if you have a word in the string that uses apostrophe, use ("").
+Also for long strings, it's better to use ("")
+
